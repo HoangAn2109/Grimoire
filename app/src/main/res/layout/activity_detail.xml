@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMagnus">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/bkgr"
+            android:scaleType="centerCrop"
+            android:src="@drawable/magnusbackgr"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/backdetail"
+        app:layout_constraintTop_toTopOf="@+id/bkgr">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:text="The Magus of Genesis"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv1"
+                android:textSize="40dp"
+                android:text="Hajimari no Mahoutsukai"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"/>
+
+
+            <TextView
+                android:id="@+id/tvfllw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Follow now to get lasted update"
+                android:textSize="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+            <ImageButton
+                android:id="@+id/btn_follow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_assistant_24"
+                app:layout_constraintBottom_toTopOf="@+id/tvAuth"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvfllw"
+                app:layout_constraintTop_toBottomOf="@+id/tv2"
+                app:layout_constraintVertical_bias="0.166" />
+
+            <TextView
+                android:id="@+id/tvAuth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvfllw"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="25dp"
+                android:text="Author: Ishinomiya Kanto"/>
+            <TextView
+                android:id="@+id/tvgen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvAuth"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:text="Genre: Fantasy, Action, Ancient time, Isekai."/>
+
+            <TextView
+                android:id="@+id/tcdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvgen"
+                android:layout_marginTop="20dp"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/magnus_description"/>
+
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tcdes"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="CHAPTERS"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recChap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv3" />
+            
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
