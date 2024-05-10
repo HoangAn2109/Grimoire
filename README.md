@@ -1,1 +1,1 @@
-"# Grimoire" 
+Grimoire is my next major project after SimpleApp beside minor projects, it's an application for book lovers can read novel, manga, etc. The application was wrote by JAVA language with Android Studio. 
